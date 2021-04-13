@@ -42,15 +42,15 @@ export default function MediaCard(props) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/bike-endurance2.jpg"
-          title="Bike Endurance"
+          image={props.workout.image}
+          title={props.workout.sport}
         />
         <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
-            Bike Endurance
+            {props.workout.sport} {props.workout.type}
           </Typography>
           <Typography>
-            Short optional description
+            {props.workout.description}
           </Typography>
         </CardContent>
       </CardActionArea>

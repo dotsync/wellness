@@ -11,11 +11,53 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
+const MOCKDATA = [
+  {
+    'sport': 'Bike',
+    'type': 'Endurance',
+    'description': 'A long ride to develop endurance',
+    'image': '/static/images/cards/bike-endurance2.jpg'
+  },
+  {
+    'sport': 'Bike',
+    'type': 'Speed',
+    'description': 'Interval sprints to develop speed',
+    'image': '/static/images/cards/bike-endurance.jpg'
+  },
+  {
+    'sport': 'Bike',
+    'type': 'Speed',
+    'description': 'Interval sprints to develop speed',
+    'image': '/static/images/cards/bike-endurance.jpg'
+  },
+    {
+    'sport': 'Bike',
+    'type': 'Speed',
+    'description': 'Interval sprints to develop speed',
+    'image': '/static/images/cards/bike-endurance2.jpg'
+  },
+]
 
 export default function WorkoutsDisplay() {
   const classes = useStyles();
   return (
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        {MOCKDATA.map((workout, i) => {
+          return (
+            <Grid item xs={6} sm={3}>
+              <WorkoutCard workout={workout} />
+            </Grid>
+          )
+        })}
+      </Grid>
+    </div >
+  )
+}
+
+/**
+
+
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
@@ -32,5 +74,6 @@ export default function WorkoutsDisplay() {
         </Grid>
       </Grid>
     </div >
-  )
-}
+
+
+ */
