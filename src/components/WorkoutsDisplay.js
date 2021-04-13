@@ -19,6 +19,7 @@ export default function WorkoutsDisplay() {
   return (
     <div>
       <Grid container spacing={3}>
+      <Grid xs={0} sm={2} />
         <Grid item xs={6} sm={3}>
           <WorkoutCard />
         </Grid>
@@ -31,6 +32,7 @@ export default function WorkoutsDisplay() {
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>Swim Speed Training</Paper>
         </Grid>
+        <Grid xs={0} sm={2} />
       </Grid>
     </div >
   )

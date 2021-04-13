@@ -26,7 +26,6 @@ function App() {
         <Grid item xs={12}>
           <Navbar />
         </Grid>
-
         {/* Search */}
         <Grid item xs={12} sm={6}>
           <Searchbar />
@@ -38,7 +37,6 @@ function App() {
         {/* Workout Cards */}
         </Grid>
         <WorkoutsDisplay />
-
     </div>
   );
 }
