@@ -10,9 +10,16 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/co
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    height: '20px'
   },
   menuButton: {
     marginRight: theme.spacing(2),
+  },
+  toolbar: {
+    minHeight: 128,
+    alignItems: 'flex-start',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
@@ -25,7 +32,7 @@ export default function ButtonAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
