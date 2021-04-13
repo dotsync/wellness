@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import { AppBar, Toolbar, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 
 import { Paper, Grid } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   },
   accountAvatarButton: {
     flexGrow: 1,
-    marginLeft: 30
   },
   toolbar: {
     minHeight: 128,
@@ -48,6 +47,7 @@ export default function ButtonAppBar() {
             </Grid>
           </Grid>
         </Toolbar>
+        <Typography variant='h1'>Hello World</Typography>
       </AppBar>
     </div>
   );
