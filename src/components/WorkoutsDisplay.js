@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import WorkoutCard from './WorkoutCard';
 import { Paper, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -19,7 +20,7 @@ export default function WorkoutsDisplay() {
     <div>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>Swimmer technique</Paper>
+          <WorkoutCard />
         </Grid>
         <Grid item xs={6} sm={3}>
           <Paper className={classes.paper}>Yoga Triathlete Flow</Paper>

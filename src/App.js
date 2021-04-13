@@ -3,7 +3,7 @@ import WorkoutsDisplay from './components/WorkoutsDisplay'
 import Searchbar from './components/Searchbar'
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid} from '@material-ui/core';
-// import Grid from '@material-ui/core/Grid';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +27,6 @@ function App() {
           <Navbar />
         </Grid>
 
-
         {/* Search */}
         <Grid item xs={12} sm={6}>
           <Searchbar />
@@ -35,6 +34,7 @@ function App() {
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper}>Catagory filter carosel</Paper>
         </Grid>
+
         {/* Workout Cards */}
         </Grid>
         <WorkoutsDisplay />
