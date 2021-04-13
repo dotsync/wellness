@@ -12,7 +12,7 @@ import AddIcon from '@material-ui/icons/Add';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    borderRadius: 15
+    borderRadius: 15,
   },
   media: {
     height: 250,
@@ -28,11 +28,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   const classes = useStyles();
 
+  console.log('props.height', props.height)
   return (
-    <Card className={classes.root}>
+    <Card
+      className={classes.root}
+      style={{
+        height: props.height
+      }}
+    >
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -43,7 +49,7 @@ export default function MediaCard() {
           <Typography gutterBottom variant="h5" component="h2">
             Bike Endurance
           </Typography>
-          <Typography gutterBottom variant="p" component="p">
+          <Typography>
             Short optional description
           </Typography>
         </CardContent>

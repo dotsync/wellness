@@ -19,16 +19,16 @@ export default function WorkoutsDisplay() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
-          <WorkoutCard />
+          <WorkoutCard height={415}/>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <WorkoutCard />
+          <WorkoutCard height={415}/>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <WorkoutCard />
+          <WorkoutCard height={415}/>
         </Grid>
         <Grid item xs={6} sm={3}>
-          <WorkoutCard />
+          <WorkoutCard height={415}/>
         </Grid>
       </Grid>
     </div >
