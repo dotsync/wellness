@@ -1,4 +1,6 @@
 import Navbar from './components/Navbar'
+import WorkoutsDisplay from './components/WorkoutsDisplay'
+import Searchbar from './components/Searchbar'
 import { makeStyles } from '@material-ui/core/styles';
 import { Paper, Grid} from '@material-ui/core';
 // import Grid from '@material-ui/core/Grid';
@@ -28,25 +30,15 @@ function App() {
 
         {/* Search */}
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          <Searchbar />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
+          <Paper className={classes.paper}>Catagory filter carosel</Paper>
         </Grid>
         {/* Workout Cards */}
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
         </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-      </Grid>
+        <WorkoutsDisplay />
+
     </div>
   );
 }
