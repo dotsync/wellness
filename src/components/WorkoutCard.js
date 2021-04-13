@@ -7,13 +7,24 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    borderRadius: 15
   },
   media: {
     height: 250,
+    margin: 10,
+    borderRadius: '25px'
+  },
+  content: {
+    color: '#20e32',
+  },
+  addFavBtn: {
+    border: '2px solid black',
+    borderRadius: 5
   },
 });
 
@@ -28,15 +39,18 @@ export default function MediaCard() {
           image="/static/images/cards/bike-endurance2.jpg"
           title="Bike Endurance"
         />
-        <CardContent>
+        <CardContent className={classes.content}>
           <Typography gutterBottom variant="h5" component="h2">
             Bike Endurance
+          </Typography>
+          <Typography gutterBottom variant="p" component="p">
+            Short optional description
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Save
+        <Button className={classes.addFavBtn} size="small" color="primary">
+          <AddIcon/>
         </Button>
       </CardActions>
     </Card>

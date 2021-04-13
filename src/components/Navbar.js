@@ -4,7 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 
-import { Paper, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
