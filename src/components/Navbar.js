@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import CloudIcon from '@material-ui/icons/Cloud';
+import SettingsIcon from '@material-ui/icons/Settings';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 
 import { Grid } from '@material-ui/core';
@@ -43,6 +45,12 @@ export default function ButtonAppBar() {
             <Grid item xs={2}>
               <IconButton edge="start" className={classes.accountAvatarButton} color="inherit" aria-label="account">
                 <AccountCircleIcon />
+              </IconButton>
+              <IconButton edge="start" color="inherit" aria-label="Settings">
+                <SettingsIcon />
+              </IconButton>
+              <IconButton edge="start" color="inherit" aria-label="Current Weather">
+                <CloudIcon />
               </IconButton>
             </Grid>
           </Grid>
