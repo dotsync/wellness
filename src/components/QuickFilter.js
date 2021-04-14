@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -26,12 +26,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function QuickFilter(props) {
   const classes = useStyles();
-  const tiles = ['All', 'Run', 'Bike', 'Swim', 'Yoga']
+
+
 
   return (
     <div className={classes.root}>
       <GridList className={classes.gridList} cols={2.5}>
-        {tiles.map((tile) => (
+        {props.tiles.map((tile) => (
           <GridListTile style={{margin: 20}}>
             <Button
               value={tile}
