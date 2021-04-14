@@ -7,6 +7,12 @@ import mockExerciseCards from './MOCK/mockExerciseCards'
 
 function App() {
   const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
+  const [searchString, setSearchString] = useState('')
+
+  function handleSearch(e) {
+    setSearchString(e.target.value)
+  }
+
   return (
     <div>
       <Grid container direction='column'>
@@ -16,7 +22,10 @@ function App() {
         <Grid item container>
           {/* Search */}
           <Grid item xs={12} sm={6}>
-            <Searchbar />
+            <Searchbar
+              searchString={searchString}
+              handleSearch={handleSearch}
+              />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant='h5'>Bike | Yoga | Run | Swim | ect..</Typography>
@@ -24,7 +33,7 @@ function App() {
         </Grid>
       </Grid>
       {/* Workout Cards */}
-      <WorkoutsDisplay exerciseCards={exerciseCards}/>
+      <WorkoutsDisplay exerciseCards={exerciseCards} searchString={searchString}/>
     </div>
   );
 }
