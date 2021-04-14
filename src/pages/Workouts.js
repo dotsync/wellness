@@ -25,9 +25,19 @@ function Workouts() {
   function handleSearch(e) {
     setSearchString(e.target.value)
   }
+
   function handleFilter(e) {
-    setQuickFilter(e.target.value)
-    console.log('quickFilter', e.target.value)
+    // each time clicked, set search to empty string
+    if (!e.target.value) {
+      console.log('Loading')
+      return
+    } else {
+      setSearchString('')
+      if (e.target.value === 'All') setQuickFilter('')
+      else setQuickFilter(e.target.value)
+      console.log('quickFilter', e.target.value)
+      setSearchString(quickFilter)
+    }
   }
 
   return (
@@ -41,7 +51,7 @@ function Workouts() {
           />
         </Grid>
         <Grid className={classes.quickFilter} item xs={12} sm={6}>
-          <QuickFilter handleFilter={handleFilter}/>
+          <QuickFilter handleFilter={handleFilter} />
         </Grid>
       </Grid>
       {/* Workout Cards */}
