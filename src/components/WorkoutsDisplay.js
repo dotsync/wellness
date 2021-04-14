@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WorkoutCard from './WorkoutCard';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,11 +13,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function WorkoutsDisplay() {
+  const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Grid container spacing={2}>
-        {mockExerciseCards.map((workout, i) => {
+        {exerciseCards.map((workout, i) => {
           return (
             <Grid item xs={6} sm={3}>
               <WorkoutCard workout={workout} />
