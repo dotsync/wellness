@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Searchbar(props) {
   const classes = useStyles();
 
-  console.log('props.searchString', props.searchString)
   return (
     <div className={classes.root} >
       <div className={classes.search}>

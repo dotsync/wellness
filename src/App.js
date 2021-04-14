@@ -6,6 +6,7 @@ import { Grid, Typography } from '@material-ui/core';
 import mockExerciseCards from './MOCK/mockExerciseCards'
 
 function App() {
+  // TODO: Implement useEffect
   const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   const [searchString, setSearchString] = useState('')
 
