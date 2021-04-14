@@ -31,7 +31,6 @@ const useStyles = makeStyles({
 export default function MediaCard(props) {
   const classes = useStyles();
 
-  console.log('props.height', props.height)
   return (
     <Card
       className={classes.root}
