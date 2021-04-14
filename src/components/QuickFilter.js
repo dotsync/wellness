@@ -24,15 +24,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function QuickFilter() {
+export default function QuickFilter(props) {
   const classes = useStyles();
-  const tiles = ['All', 'Run', 'Bike', 'Swim', 'Yoga', 'Run', 'Bike', 'Swim', 'Yoga']
+  const tiles = ['All', 'Run', 'Bike', 'Swim', 'Yoga']
+
   return (
     <div className={classes.root}>
       <GridList className={classes.gridList} cols={2.5}>
         {tiles.map((tile) => (
           <GridListTile style={{margin: 20}}>
-            <Button color='primary' variant='contained' className={classes.tileBtn}>{tile}</Button>
+            <Button
+              value={tile}
+              onClick={props.handleFilter}
+              color='primary'
+              variant='contained'
+              className={classes.tileBtn}>
+                {tile}
+            </Button>
           </GridListTile>
         ))}
       </GridList>

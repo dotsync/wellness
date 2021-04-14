@@ -20,9 +20,14 @@ function Workouts() {
   // TODO: Implement useEffect
   const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   const [searchString, setSearchString] = useState('')
+  const [quickFilter, setQuickFilter] = useState('')
 
   function handleSearch(e) {
     setSearchString(e.target.value)
+  }
+  function handleFilter(e) {
+    setQuickFilter(e.target.value)
+    console.log('quickFilter', e.target.value)
   }
 
   return (
@@ -36,7 +41,7 @@ function Workouts() {
           />
         </Grid>
         <Grid className={classes.quickFilter} item xs={12} sm={6}>
-          <QuickFilter />
+          <QuickFilter handleFilter={handleFilter}/>
         </Grid>
       </Grid>
       {/* Workout Cards */}
