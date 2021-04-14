@@ -36,7 +36,7 @@ export default function QuickFilter(props) {
             <Button
               value={tile}
               onClick={props.handleFilter}
-              color='primary'
+              color='secondary'
               variant='contained'
               className={classes.tileBtn}>
                 {tile}
