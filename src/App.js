@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar'
 import Workouts from './pages/Workouts'
 import { Grid } from '@material-ui/core';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   return (
