@@ -56,8 +56,8 @@ export default function ButtonAppBar() {
             </Grid>
           </Grid>
         </Toolbar>
-        <Typography variant='h1' style={{marginLeft:50}}>proDOJO</Typography>
-        <Typography style={{marginLeft:70}}>The fitness app</Typography>
+        <Typography variant='h1' style={{ marginLeft: 50 }}>proDOJO</Typography>
+        <Typography style={{ marginLeft: 70, padding: 50 }}>A fitness app</Typography>
       </AppBar>
     </div>
   );
