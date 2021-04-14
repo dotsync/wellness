@@ -1,17 +1,10 @@
 import Navbar from './components/Navbar'
 import WorkoutsDisplay from './components/WorkoutsDisplay'
 import Searchbar from './components/Searchbar'
-import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
-}));
-
-
 function App() {
-  const classes = useStyles();
-
   return (
     <div>
       <Grid container direction='column'>
