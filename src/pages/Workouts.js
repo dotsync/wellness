@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import WorkoutsDisplay from '../components/WorkoutsDisplay'
 import Searchbar from '../components/Searchbar'
-import { Grid, Typography } from '@material-ui/core';
+import QuickFilter from '../components/QuickFilter'
+import { Grid } from '@material-ui/core';
 import mockExerciseCards from '../MOCK/mockExerciseCards'
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    // border: '3px solid black'
+    margin: 15,
+    alignItems: 'center'
+  },
+}));
+
 function Workouts() {
+  const classes = useStyles();
   // TODO: Implement useEffect
   const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   const [searchString, setSearchString] = useState('')
@@ -15,7 +27,7 @@ function Workouts() {
 
   return (
     <div>
-      <Grid item container>
+      <Grid item container className={classes.root}>
         {/* Search */}
         <Grid item xs={12} sm={6}>
           <Searchbar
@@ -23,8 +35,8 @@ function Workouts() {
             handleSearch={handleSearch}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Typography variant='h5'>Bike | Yoga | Run | Swim | ect..</Typography>
+        <Grid className={classes.quickFilter} item xs={12} sm={6}>
+          <QuickFilter />
         </Grid>
       </Grid>
       {/* Workout Cards */}
