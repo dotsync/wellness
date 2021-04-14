@@ -11,7 +11,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    // maxWidth: 345,
     borderRadius: 15,
   },
   media: {

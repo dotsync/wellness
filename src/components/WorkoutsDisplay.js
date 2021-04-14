@@ -26,7 +26,7 @@ export default function WorkoutsDisplay(props) {
           else if (exerciseCard.type.toLowerCase().includes(props.searchString.toLowerCase())) return exerciseCard
         }).map((workout, i) => { // create exercise grid
           return (
-            <Grid key={workout.id} item xs={6} sm={3}>
+            <Grid key={workout.id} item xs={12} sm={3}>
               <WorkoutCard workout={workout} />
             </Grid>
           )
