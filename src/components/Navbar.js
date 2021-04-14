@@ -2,10 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import CloudIcon from '@material-ui/icons/Cloud';
 import SettingsIcon from '@material-ui/icons/Settings';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 
 import { Grid } from '@material-ui/core';
@@ -16,8 +14,9 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  accountAvatarButton: {
+  accountAvatarIconButton: {
     flexGrow: 1,
+    marginRight: 20
   },
   toolbar: {
     minHeight: 128,
@@ -43,9 +42,9 @@ export default function ButtonAppBar() {
                 <MenuIcon />
               </IconButton>
             </Grid>
-            <Grid item xs={8} />
-            <Grid item xs={2}>
-              <IconButton edge="start" className={classes.accountAvatarButton} color="inherit" aria-label="account">
+            <Grid item xs={9} />
+            <Grid item xs={1}>
+              <IconButton edge="start" color="inherit" aria-label="account">
                 <AccountCircleIcon />
               </IconButton>
               <IconButton edge="start" color="inherit" aria-label="Calendar">
@@ -53,12 +52,6 @@ export default function ButtonAppBar() {
               </IconButton>
               <IconButton edge="start" color="inherit" aria-label="Settings">
                 <SettingsIcon />
-              </IconButton>
-              <IconButton edge="start" color="inherit" aria-label="Premium">
-                <StarOutlineIcon />
-              </IconButton>
-              <IconButton edge="start" color="inherit" aria-label="Current Weather">
-                <CloudIcon />
               </IconButton>
             </Grid>
           </Grid>
