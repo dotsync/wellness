@@ -63,7 +63,8 @@ export default function ButtonAppBar() {
             </Grid>
           </Grid>
         </Toolbar>
-        <Typography variant='h1'>Hello World</Typography>
+        <Typography variant='h1' style={{marginLeft:50}}>proDOJO</Typography>
+        <Typography style={{marginLeft:70}}>The fitness app</Typography>
       </AppBar>
     </div>
   );
