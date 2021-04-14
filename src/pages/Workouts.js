@@ -37,8 +37,7 @@ function Workouts() {
   function handleClick(e) {
     if (!e.target.value) {
       console.log(`Uhoh e.target.value is undefined for some reason ${e.target.value}
-
-      exercise cards state is: ${searchString}`)
+      Search String is: ${searchString}`)
       // force reload state?
       console.log()
     } else {
