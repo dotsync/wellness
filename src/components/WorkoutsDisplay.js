@@ -29,26 +29,3 @@ export default function WorkoutsDisplay() {
     </div >
   )
 }
-
-/**
-
-
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={6} sm={3}>
-          <WorkoutCard height={415}/>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <WorkoutCard height={415}/>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <WorkoutCard height={415}/>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <WorkoutCard height={415}/>
-        </Grid>
-      </Grid>
-    </div >
-
-
- */
