@@ -19,8 +19,9 @@ export default function WorkoutsDisplay() {
     <div className={classes.root}>
       <Grid container spacing={2}>
         {exerciseCards.map((workout, i) => {
+          console.log('ID', workout.id)
           return (
-            <Grid item xs={6} sm={3}>
+            <Grid key={workout.id} item xs={6} sm={3}>
               <WorkoutCard workout={workout} />
             </Grid>
           )
