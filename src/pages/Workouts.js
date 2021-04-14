@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import WorkoutsDisplay from '../components/WorkoutsDisplay'
 import Searchbar from '../components/Searchbar'
@@ -17,10 +17,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Workouts() {
   const classes = useStyles();
-  // TODO: Implement useEffect
-  const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
-  const [searchString, setSearchString] = useState('')
+
+  const [exerciseCards, setExerciseCards] = useState([]);
+  const [searchString, setSearchString] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
   const tiles = ['All', 'Run', 'Bike', 'Swim', 'Yoga']
+
+  useEffect(() => {
+    setExerciseCards(mockExerciseCards)
+    setIsLoaded(true)
+  }, [])
 
   function handleSearch(e) {
     setSearchString(e.target.value)
