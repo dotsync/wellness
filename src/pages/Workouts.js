@@ -20,8 +20,7 @@ function Workouts() {
   // TODO: Implement useEffect
   const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   const [searchString, setSearchString] = useState('')
-  const [quickFilter, setQuickFilter] = useState('')
-  const [tiles, setTiles] = useState(['All', 'Run', 'Bike', 'Swim', 'Yoga'])
+  const tiles = ['All', 'Run', 'Bike', 'Swim', 'Yoga']
 
   function handleSearch(e) {
     setSearchString(e.target.value)
@@ -29,7 +28,7 @@ function Workouts() {
 
   function handleFilter(e) {
     // each time clicked, set search to empty string
-    console.log('quickFilter', e.target.value)
+    console.log('handleFilter', e.target.value)
     if (!e.target.value) {
       console.log('Loading')
       return
