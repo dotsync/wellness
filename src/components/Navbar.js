@@ -4,6 +4,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import CloudIcon from '@material-ui/icons/Cloud';
 import SettingsIcon from '@material-ui/icons/Settings';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 
 import { Grid } from '@material-ui/core';
@@ -46,8 +48,14 @@ export default function ButtonAppBar() {
               <IconButton edge="start" className={classes.accountAvatarButton} color="inherit" aria-label="account">
                 <AccountCircleIcon />
               </IconButton>
+              <IconButton edge="start" color="inherit" aria-label="Calendar">
+                <CalendarTodayIcon />
+              </IconButton>
               <IconButton edge="start" color="inherit" aria-label="Settings">
                 <SettingsIcon />
+              </IconButton>
+              <IconButton edge="start" color="inherit" aria-label="Premium">
+                <StarOutlineIcon />
               </IconButton>
               <IconButton edge="start" color="inherit" aria-label="Current Weather">
                 <CloudIcon />
