@@ -26,21 +26,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function QuickFilter(props) {
   const classes = useStyles();
-
-
+  const [tiles, setTiles] = useState(['All', 'Run', 'Bike', 'Swim', 'Yoga']);
 
   return (
     <div className={classes.root}>
       <GridList className={classes.gridList} cols={2.5}>
-        {props.tiles.map((tile) => (
-          <GridListTile style={{margin: 20}}>
+        {['All', 'Run', 'Bike', 'Swim', 'Yoga'].map((tile) => (
+          <GridListTile style={{ margin: 20 }}>
             <Button
+              disabled={props.buttonIsDisabled}
               value={tile}
-              onClick={props.handleFilter}
+              onClick={props.handleClick}
               color='secondary'
               variant='contained'
               className={classes.tileBtn}>
-                {tile}
+              {tile}
             </Button>
           </GridListTile>
         ))}
