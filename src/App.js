@@ -1,10 +1,12 @@
+import React, { useState } from 'react';
 import Navbar from './components/Navbar'
 import WorkoutsDisplay from './components/WorkoutsDisplay'
 import Searchbar from './components/Searchbar'
 import { Grid, Typography } from '@material-ui/core';
-import React from 'react';
+import mockExerciseCards from './MOCK/mockExerciseCards'
 
 function App() {
+  const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
   return (
     <div>
       <Grid container direction='column'>
@@ -22,7 +24,7 @@ function App() {
         </Grid>
       </Grid>
       {/* Workout Cards */}
-      <WorkoutsDisplay />
+      <WorkoutsDisplay exerciseCards={exerciseCards}/>
     </div>
   );
 }

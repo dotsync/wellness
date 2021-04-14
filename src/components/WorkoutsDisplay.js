@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import WorkoutCard from './WorkoutCard';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import mockExerciseCards from '../MOCK/mockExerciseCards'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,13 +11,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function WorkoutsDisplay() {
-  const [exerciseCards, setExerciseCards] = useState(mockExerciseCards)
+export default function WorkoutsDisplay(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Grid container spacing={2}>
-        {exerciseCards.map((workout, i) => {
+        {props.exerciseCards.map((workout, i) => {
           return (
             <Grid key={workout.id} item xs={6} sm={3}>
               <WorkoutCard workout={workout} />
