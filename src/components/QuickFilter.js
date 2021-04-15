@@ -31,8 +31,8 @@ export default function QuickFilter(props) {
   return (
     <div className={classes.root}>
       <GridList className={classes.gridList} cols={2.5}>
-        {['All', 'Run', 'Bike', 'Swim', 'Yoga'].map((tile) => (
-          <GridListTile style={{ margin: 20 }}>
+        {['All', 'Run', 'Bike', 'Swim', 'Yoga'].map((tile, i) => (
+          <GridListTile key={i} style={{ margin: 20 }}>
             <Button
               disabled={props.buttonIsDisabled}
               value={tile}

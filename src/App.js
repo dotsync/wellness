@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{    maxWidth: '100%',
+    <div style={{
       overflowX: 'hidden'}}>
       <Router>
       <Grid container direction='column'>

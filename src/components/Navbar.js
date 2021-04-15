@@ -33,7 +33,7 @@ export default function ButtonAppBar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+<div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
           <Grid container spacing={3}>
@@ -59,6 +59,6 @@ export default function ButtonAppBar() {
         <Typography variant='h1' style={{ marginLeft: 50 }}>proDOJO</Typography>
         <Typography style={{ marginLeft: 70, padding: 50 }}>A fitness app</Typography>
       </AppBar>
-    </div>
+      </div>
   );
 }
