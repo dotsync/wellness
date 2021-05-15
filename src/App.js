@@ -8,16 +8,16 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div style={{
-      overflowX: 'hidden'}}>
+      overflowX: 'hidden'
+    }}>
       <Router>
-      <Grid container direction='column'>
-        <Grid item>
-          <Navbar />
+        <Grid container direction='column'>
+          <Grid item>
+            <Navbar />
+          </Grid>
+          <Route path='/workouts' component={Workouts} />
+          <Route path='/signup' component={Signup} />
         </Grid>
-
-        <Route path='/workouts' component={Workouts}/>
-        <Route path='/signup' component={Signup}/>
-      </Grid>
       </Router>
     </div>
   );
